@@ -28,7 +28,7 @@
  * Use online command StateText to translate ON, OFF, HOLD and TOGGLE.
  * Use online command Prefix to translate cmnd, stat and tele.
  *
- * Updated until v12.5.0.2 - Last update 08.05.2023
+ * Updated until v15.0.1.1 - Last update 01.07.2025
 \*********************************************************************/
 
 //#define LANGUAGE_MODULE_NAME         // Enable to display "Module Generic" (ie Spanish), Disable to display "Generic Module" (ie English)
@@ -52,12 +52,14 @@
 
 // Common
 #define D_ABSOLUTE_HUMIDITY "Wilgotność"
+#define D_ADDRESS "Adres"
 #define D_ADMIN "Admin"
 #define D_AIR_QUALITY "Jakość powietrza"
 #define D_AP "AP"                    // Access Point
 #define D_AS "jak"
 #define D_AT "at"
 #define D_AUTO "AUTO"
+#define D_AUTO_UPDATE "Auto Update"
 #define D_BATTERY "Bateria"
 #define D_BATT "Bat"                // Short for Battery
 #define D_BATTERY_CHARGE "Ładowanie"   // Battery charge in %
@@ -88,6 +90,7 @@
 #define D_DEBUG "Debug"
 #define D_DEWPOINT "Punkt rosy"
 #define D_DISABLED "Wyłączony"
+#define D_DISCONNECTED "Rozłączony"
 #define D_DISTANCE "Odległość"
 #define D_DNS_SERVER "Serwer DNS"
 #define D_DO "Rozpuszczalność tlenu"
@@ -291,7 +294,7 @@
 #define D_RESET_CONFIGURATION "Reset ustawień"
 #define D_BACKUP_CONFIGURATION "Kopia ustawień"
 #define D_RESTORE_CONFIGURATION "Przywracanie ustawień"
-#define D_START_RESTORE "Start restore"
+#define D_START_RESTORE "Start przywracania"
 #define D_MAIN_MENU "Menu główne"
 
 #define D_MODULE_PARAMETERS "Parametry modułu"
@@ -674,8 +677,8 @@
 // xsns_60_GPS
 #define D_LATITUDE             "Szerokość"
 #define D_LONGITUDE            "Długość"
-#define D_HORIZONTAL_ACCURACY  "Horizontal Accuracy"
-#define D_ALTITUDE             "Dokładność pozioma"
+#define D_HORIZONTAL_ACCURACY  "Dokładność pozioma"
+#define D_ALTITUDE             "Wysokość"
 #define D_VERTICAL_ACCURACY    "Dokładność pionowa"
 #define D_SPEED                "Prędkość"
 #define D_SPEED_ACCURACY       "Dokładność prędkości"
@@ -776,6 +779,8 @@
 #define D_SENSOR_SDM630_RX     "SDM630 Rx"
 #define D_SENSOR_WE517_TX      "WE517 Tx"
 #define D_SENSOR_WE517_RX      "WE517 Rx"
+#define D_SENSOR_LD2402_TX     "LD2402 Tx"
+#define D_SENSOR_LD2402_RX     "LD2402 Rx"
 #define D_SENSOR_LD2410_TX     "LD2410 Tx"
 #define D_SENSOR_LD2410_RX     "LD2410 Rx"
 #define D_SENSOR_LD2410S_TX     "LD2410S Tx"
@@ -863,7 +868,7 @@
 #define D_SENSOR_ADE7953_RST   "ADE7953 RST"
 #define D_SENSOR_ADE7953_CS    "ADE7953 CS"
 #define D_SENSOR_BUZZER        "Dzwonek"
-#define D_SENSOR_DISP_RESET    "Reset Display"
+#define D_SENSOR_DISP_RESET    "Reset wyśwetlacza"
 #define D_SENSOR_ZIGBEE_TXD    "Zigbee Tx"
 #define D_SENSOR_ZIGBEE_RXD    "Zigbee Rx"
 #define D_SENSOR_ZIGBEE_RST    "Zigbee Rst"
@@ -927,8 +932,8 @@
 #define D_SENSOR_ADC_JOYSTICK  "ADC Dżojstik"
 #define D_SENSOR_ADC_PH        "ADC pH"
 #define D_SENSOR_ADC_MQ        "ADC MQ"
-#define D_SENSOR_ADC_VOLTAGE   "ADC Voltage"
-#define D_SENSOR_ADC_CURRENT   "ADC Current"
+#define D_SENSOR_ADC_VOLTAGE   "ADC napięcie"
+#define D_SENSOR_ADC_CURRENT   "ADC prąd"
 #define D_GPIO_WEBCAM_PWDN     "CAM_PWDN"
 #define D_GPIO_WEBCAM_RESET    "CAM_RESET"
 #define D_GPIO_WEBCAM_XCLK     "CAM_XCLK"
@@ -1313,5 +1318,9 @@
 #define D_EXPORT                          "Export"
 #define D_CHARGING                        "Ładowanie"
 #define D_CAPACITY                        "Pojemność"
+
+// xnrg_25_v9240.ino
+#define D_SENSOR_V9240_TX "V9240 TX"
+#define D_SENSOR_V9240_RX "V9240 RX"
 
 #endif  // _LANGUAGE_PL_PL_D_H_
