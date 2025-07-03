@@ -36,9 +36,9 @@ While fallback or downgrading is common practice it was never supported due to S
 
 This release will be supported from ESP8266/Arduino library Core version **2.7.8** due to reported security and stability issues on previous Core version. This will also support gzipped binaries.
 
-This release will be supported from ESP32/Arduino library Core version **v3.1.1.250203**.
+This release will be supported from ESP32/Arduino library Core version **v3.1.3.250504**.
 
-Support of ESP8266 Core versions before 2.7.8 and ESP32 Core versions before v3.1.1.250203 have been removed.
+Support of ESP8266 Core versions before 2.7.8 and ESP32 Core versions before v3.1.3.250504 have been removed.
 
 ## Support of TLS
 
@@ -75,12 +75,12 @@ Latest released binaries can be downloaded from
 - http://ota.tasmota.com/tasmota/release
 
 Historical binaries can be downloaded from
-- http://ota.tasmota.com/tasmota/release-14.5.0
+- http://ota.tasmota.com/tasmota/release-15.0.1
 
 The latter links can be used for OTA upgrades too like ``OtaUrl http://ota.tasmota.com/tasmota/release/tasmota.bin.gz``
 
 ### ESP32, ESP32-C2, ESP32-C3, ESP32-C6, ESP32-S2 and ESP32-S3 based
-The following binary downloads have been compiled with ESP32/Arduino library core version **v3.1.1.250203**.
+The following binary downloads have been compiled with ESP32/Arduino library core version **v3.1.3.250504**.
 
 - **tasmota32.bin** = The Tasmota version with most drivers including additional sensors and KNX for 4M+ flash.  **RECOMMENDED RELEASE BINARY**
 - **tasmota32solo1.bin** = The Tasmota version with most drivers including additional sensors and KNX for single core ESP32 and 4M+ flash.
@@ -104,7 +104,7 @@ Latest released binaries can be downloaded from
 - https://ota.tasmota.com/tasmota32/release
 
 Historical binaries can be downloaded from
-- https://ota.tasmota.com/tasmota32/release-14.5.0
+- https://ota.tasmota.com/tasmota32/release-15.0.1
 
 The latter links can be used for OTA upgrades too like ``OtaUrl https://ota.tasmota.com/tasmota32/release/tasmota32.bin``
 
@@ -114,27 +114,18 @@ The latter links can be used for OTA upgrades too like ``OtaUrl https://ota.tasm
 
 [Complete list](BUILDS.md) of available feature and sensors.
 
-## Changelog v14.5.0.2
+## Changelog v15.0.1.1
 ### Added
-- Allow acl in mqtt when client certificate is in use with `#define USE_MQTT_CLIENT_CERT` [#22998](https://github.com/arendst/Tasmota/issues/22998)
-- Berry experimental driver for AXP2101 for M5Core2v1.1 [#23039](https://github.com/arendst/Tasmota/issues/23039)
-- Berry `tasmota.when_network_up()` and simplified Matter using it [#23057](https://github.com/arendst/Tasmota/issues/23057)
-- Berry `introspect.solidified()` to know if a Berry object is solidified or in RAM [#23063](https://github.com/arendst/Tasmota/issues/23063)
-- Berry `global.undef()` to undefine a global variable [#23073](https://github.com/arendst/Tasmota/issues/23073)
-- LVGL experimental mirroring of display on Web UI [#23041](https://github.com/arendst/Tasmota/issues/23041)
+- I2S additions [#23543](https://github.com/arendst/Tasmota/issues/23543)
 
 ### Breaking Changed
 
 ### Changed
-- ESP32 Platform from 2025.02.30 to 2025.03.30, Framework (Arduino Core) from v3.1.1.250203 to v3.1.3.250302 and IDF from v5.3.2.250120 to 5.3.2.250228 [#23088](https://github.com/arendst/Tasmota/issues/23088)
-- GPIOViewer from v1.6.1 to v1.6.2 (No functional change)
-- ESP32 enable webcam version 2 [#18732](https://github.com/arendst/Tasmota/issues/18732)
-- LVGL, prepare for HASPmota theme, change: no-grow when clicked, DPI set to 160 [#23040](https://github.com/arendst/Tasmota/issues/23040)
-- LVGL Mirroring add checkbox to enable/disable the feature (in the iterim for a better solution) [#23047](https://github.com/arendst/Tasmota/issues/23047)
-- Leds Panel add checkbox to enable/disable the feature (in the iterim for a better solution) [#23048](https://github.com/arendst/Tasmota/issues/23048)
+- Library names [#23560](https://github.com/arendst/Tasmota/issues/23560)
+- ESP32 LoRaWan decoding won't duplicate non-decoded message if `SO147 0`
+- BLE updates for esp-nimble-cpp v2.x [#23553](https://github.com/arendst/Tasmota/issues/23553)
 
 ### Fixed
-- Too many zeros in RCSwitch received data regression from v14.4.1.4 [#23050](https://github.com/arendst/Tasmota/issues/23050)
-- Berry prevent `import` from hiding a solidified class [#23112](https://github.com/arendst/Tasmota/issues/23112)
+- LVGL restore `lv_chart.set_range` removed in LVGL 9.3.0 in favor of `lv_chart.set_axis_range` [#23567](https://github.com/arendst/Tasmota/issues/23567)
 
 ### Removed
